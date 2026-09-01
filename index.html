@@ -3,34 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suraj Kumar Bindra | Portfolio</title>
+    <title>Suraj Kumar Bindra | Software Engineer Portfolio</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
                     },
                     colors: {
-                        brand: {
-                            bg: '#0a0f1d',
-                            card: '#111827',
-                            accent: '#3b82f6',
-                            glow: '#60a5fa',
+                        theme: {
+                            purple: '#422953',
+                            slate: '#3F567F',
+                            coral: '#E0563F',
+                            orchid: '#D174D2',
+                            bg: '#1c1326',
+                            card: '#291b38',
                         }
                     }
                 }
@@ -38,115 +34,107 @@
         }
     </script>
     <style>
+        body {
+            background: linear-gradient(135deg, #181024 0%, #291a38 50%, #3f567f 100%);
+            background-attachment: fixed;
+        }
         .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(41, 27, 56, 0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(209, 116, 210, 0.15);
         }
         .glass-nav {
-            background: rgba(10, 15, 29, 0.8);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(24, 16, 36, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(209, 116, 210, 0.1);
         }
     </style>
 </head>
-<body class="bg-brand-bg text-slate-300 font-sans antialiased selection:bg-brand-accent selection:text-white relative overflow-x-hidden">
+<body class="text-slate-200 font-sans antialiased selection:bg-theme-coral selection:text-white">
 
-    <!-- Background Glow Elements -->
-    <div class="fixed top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Background Glow Effects -->
+    <div class="fixed top-10 left-10 w-96 h-96 bg-theme-orchid/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed bottom-10 right-10 w-[30rem] h-[30rem] bg-theme-coral/10 rounded-full blur-[140px] pointer-events-none"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+    <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="text-xl font-extrabold text-white tracking-wider flex items-center gap-2">
-                <span class="text-brand-accent font-mono">&lt;</span>Suraj Bindra<span class="text-brand-accent font-mono">/&gt;</span>
+            <a href="index.html" class="text-2xl font-display font-extrabold text-white tracking-tight flex items-center gap-1">
+                <span class="text-theme-coral">S</span>URAJ<span class="text-theme-orchid">.</span>
             </a>
             
-            <div class="hidden md:flex gap-8 font-medium text-sm">
-                <a href="#about" class="hover:text-brand-accent transition-colors">About</a>
-                <a href="#skills" class="hover:text-brand-accent transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-brand-accent transition-colors">Projects</a>
-                <a href="#education" class="hover:text-brand-accent transition-colors">Education</a>
-                <a href="#certificates" class="hover:text-brand-accent transition-colors">Certificates</a>
+            <div class="hidden md:flex gap-8 font-medium text-sm text-slate-300">
+                <a href="#about" class="hover:text-theme-orchid transition-colors">About</a>
+                <a href="#skills" class="hover:text-theme-orchid transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-theme-orchid transition-colors">Projects</a>
+                <a href="#education" class="hover:text-theme-orchid transition-colors">Education</a>
+                <a href="credentials.html" class="text-theme-orchid font-semibold hover:text-theme-coral transition-colors flex items-center gap-1.5">
+                    Credentials <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
             </div>
 
-            <a href="mailto:surajbindra73@gmail.com" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-brand-accent/30 text-brand-accent hover:bg-brand-accent hover:text-white transition-all duration-300 font-medium text-sm">
-                Say Hello <i class="fa-solid fa-paper-plane text-xs"></i>
+            <a href="mailto:surajbindra73@gmail.com" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-theme-coral to-theme-orchid text-white font-semibold text-sm hover:opacity-90 transition-all shadow-lg shadow-theme-coral/20">
+                Contact Me
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-24 pb-12 px-6 max-w-6xl mx-auto" id="about">
+    <section class="min-h-screen flex items-center pt-28 pb-16 px-6 max-w-6xl mx-auto" id="about">
         <div class="grid md:grid-cols-12 gap-12 items-center w-full">
-            <div class="md:col-span-8 space-y-6" data-aos="fade-right" data-aos-duration="1000">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-brand-accent text-sm font-mono">
-                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
-                    Available for Opportunities
+            <div class="md:col-span-8 space-y-6" data-aos="fade-right">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-theme-orchid/10 border border-theme-orchid/30 text-theme-orchid text-xs font-semibold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-theme-coral animate-ping"></span>
+                    Software Engineering Student
                 </div>
                 
-                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
-                    Hi, I'm <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Suraj Kumar Bindra</span>
+                <h1 class="text-4xl sm:text-6xl font-display font-extrabold text-white tracking-tight leading-tight">
+                    Crafting logic into <span class="bg-gradient-to-r from-theme-orchid via-theme-coral to-white bg-clip-text text-transparent">impactful applications</span>
                 </h1>
                 
-                <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
-                    A Computer Science & Engineering student at Lovely Professional University. Passionate about problem-solving, software engineering, systems programming, and building scalable applications.
+                <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
+                    Hi, I'm <strong class="text-white">Suraj Kumar Bindra</strong>. A Computer Science student at Lovely Professional University focused on systems programming, data structures, and automation solutions.
                 </p>
 
-                <!-- Action Buttons -->
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="mailto:surajbindra73@gmail.com" class="px-6 py-3 rounded-xl bg-brand-accent text-white font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25 flex items-center gap-2">
-                        <i class="fa-regular fa-envelope"></i> Contact Me
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="mailto:surajbindra73@gmail.com" class="px-6 py-3 rounded-xl bg-theme-coral text-white font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-theme-coral/25 flex items-center gap-2">
+                        <i class="fa-regular fa-envelope"></i> Email Me
                     </a>
-                    <a href="https://github.com/surajbindra" target="_blank" class="px-6 py-3 rounded-xl glass-card text-white font-medium hover:border-brand-accent/50 transition-all flex items-center gap-2">
+                    <a href="https://github.com/surajbindra" target="_blank" class="px-6 py-3 rounded-xl glass-card text-white font-semibold hover:border-theme-orchid transition-all flex items-center gap-2">
                         <i class="fa-brands fa-github"></i> GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/suraj-bindra" target="_blank" class="px-6 py-3 rounded-xl glass-card text-white font-medium hover:border-brand-accent/50 transition-all flex items-center gap-2">
+                    <a href="https://www.linkedin.com/in/suraj-bindra" target="_blank" class="px-6 py-3 rounded-xl glass-card text-white font-semibold hover:border-theme-orchid transition-all flex items-center gap-2">
                         <i class="fa-brands fa-linkedin"></i> LinkedIn
                     </a>
                 </div>
 
-                <!-- Contact Meta -->
-                <div class="flex flex-wrap gap-6 pt-6 text-sm text-slate-400 font-mono">
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-phone text-brand-accent"></i> +91 8766967908
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-location-dot text-brand-accent"></i> Phagwara, Punjab
-                    </div>
+                <div class="flex flex-wrap gap-6 pt-4 text-xs font-mono text-slate-400 border-t border-slate-700/50">
+                    <div><i class="fa-solid fa-phone text-theme-coral mr-2"></i>+91 8766967908</div>
+                    <div><i class="fa-solid fa-location-dot text-theme-coral mr-2"></i>Phagwara, Punjab</div>
                 </div>
             </div>
 
-            <!-- Quick Stats/Achievements Card -->
-            <div class="md:col-span-4" data-aos="fade-left" data-aos-duration="1000">
-                <div class="glass-card rounded-2xl p-6 space-y-6">
-                    <h3 class="text-white font-bold text-lg border-b border-slate-800 pb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-trophy text-amber-400"></i> Key Achievements
+            <!-- Quick Showcase Card -->
+            <div class="md:col-span-4" data-aos="fade-left">
+                <div class="glass-card rounded-3xl p-6 space-y-6 relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-theme-coral/20 rounded-full blur-2xl"></div>
+                    <h3 class="text-white font-display font-bold text-xl border-b border-white/10 pb-4 flex items-center justify-between">
+                        Overview
+                        <a href="credentials.html" class="text-xs text-theme-orchid font-normal hover:underline">View All &rarr;</a>
                     </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <span class="p-2 rounded-lg bg-blue-500/10 text-brand-accent text-xs mt-1"><i class="fa-solid fa-code"></i></span>
-                            <div>
-                                <p class="text-white font-semibold">100+ Solved Questions</p>
-                                <p class="text-xs text-slate-400">On LPU's coding platform Neo Colab</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 text-xs mt-1"><i class="fa-solid fa-laptop-code"></i></span>
-                            <div>
-                                <p class="text-white font-semibold">4 Hackathons</p>
-                                <p class="text-xs text-slate-400">Participated in University Level Hackathons</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 text-xs mt-1"><i class="fa-solid fa-shield-halved"></i></span>
-                            <div>
-                                <p class="text-white font-semibold">Community Impact</p>
-                                <p class="text-xs text-slate-400">Spread Cyber Awareness to 100+ school students</p>
-                            </div>
-                        </li>
-                    </ul>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                            <p class="text-xs text-theme-orchid font-semibold">PROBLEMS SOLVED</p>
+                            <p class="text-2xl font-extrabold text-white">100+</p>
+                            <p class="text-xs text-slate-400">On LPU's Neo Colab coding platform</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                            <p class="text-xs text-theme-coral font-semibold">HACKATHONS</p>
+                            <p class="text-2xl font-extrabold text-white">4 Participations</p>
+                            <p class="text-xs text-slate-400">University-level competition projects</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,56 +143,49 @@
     <!-- Skills Section -->
     <section class="py-20 px-6 max-w-6xl mx-auto" id="skills">
         <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-white mb-4">Technical Expertise</h2>
-            <div class="h-1 w-12 bg-brand-accent mx-auto rounded-full"></div>
+            <h2 class="text-3xl font-display font-bold text-white mb-3">Skills & Abilities</h2>
+            <div class="h-1 w-16 bg-gradient-to-r from-theme-coral to-theme-orchid mx-auto rounded-full"></div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
-            <!-- Languages & DB -->
-            <div class="glass-card p-6 rounded-2xl hover:border-brand-accent/40 transition-all group" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-brand-accent flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+            <div class="glass-card p-8 rounded-3xl hover:border-theme-orchid/50 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 rounded-2xl bg-theme-orchid/20 text-theme-orchid flex items-center justify-center text-xl mb-6">
                     <i class="fa-solid fa-code"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-4">Languages & DB</h3>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">C / C++</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">Python</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">SQL</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">MySQL</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">PL/SQL</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">C / C++</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">Python</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">SQL</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">MySQL</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">PL/SQL</span>
                 </div>
             </div>
 
-            <!-- Core Concepts -->
-            <div class="glass-card p-6 rounded-2xl hover:border-brand-accent/40 transition-all group" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-brain"></i>
+            <div class="glass-card p-8 rounded-3xl hover:border-theme-coral/50 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 rounded-2xl bg-theme-coral/20 text-theme-coral flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid fa-layer-group"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-4">Core Concepts</h3>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">Data Structures & Algo</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">Operating Systems</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">OOPS</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">DBMS</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">Computer Networks</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">Data Structures</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">Algorithms</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">Operating Systems</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">OOPS</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">DBMS</span>
                 </div>
             </div>
 
-            <!-- Tools & Platforms -->
-            <div class="glass-card p-6 rounded-2xl hover:border-brand-accent/40 transition-all group" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
+            <div class="glass-card p-8 rounded-3xl hover:border-theme-orchid/50 transition-all group" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-12 h-12 rounded-2xl bg-theme-slate/40 text-slate-200 flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid fa-wrench"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Tools & Soft Skills</h3>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">VSCode</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">Git & GitHub</span>
-                    <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono">Excel</span>
-                </div>
-                <div class="pt-2 border-t border-slate-800/80 flex flex-wrap gap-2">
-                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs">Leadership</span>
-                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs">Team Player</span>
-                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs">Adaptability</span>
+                <h3 class="text-xl font-bold text-white mb-4">Tools & Platforms</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">VSCode</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">Git</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">GitHub</span>
+                    <span class="px-3 py-1 rounded-lg bg-white/5 text-slate-200 text-xs font-mono">Arduino</span>
                 </div>
             </div>
         </div>
@@ -213,188 +194,66 @@
     <!-- Projects Section -->
     <section class="py-20 px-6 max-w-6xl mx-auto" id="projects">
         <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-white mb-4">Featured Projects</h2>
-            <div class="h-1 w-12 bg-brand-accent mx-auto rounded-full"></div>
+            <h2 class="text-3xl font-display font-bold text-white mb-3">Featured Projects</h2>
+            <div class="h-1 w-16 bg-gradient-to-r from-theme-coral to-theme-orchid mx-auto rounded-full"></div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-xs font-mono text-brand-accent">Aug 2026</span>
-                        <a href="https://github.com/surajbindra" target="_blank" class="text-slate-400 hover:text-white text-lg"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Student Management System</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-6 list-disc list-inside">
-                        <li>Console-based application to manage student records (add, search, update, display).</li>
-                        <li>Implemented CRUD operations with Object-Oriented Programming and arrays.</li>
-                        <li>Applied OOP logic and conditional structures for record optimization.</li>
-                    </ul>
+            <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300" data-aos="fade-up">
+                <div>
+                    <span class="text-xs font-mono text-theme-coral font-semibold">Aug 2026</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-3">Student Management System</h3>
+                    <p class="text-sm text-slate-300 mb-6">Console-based C++ application managing student records with CRUD operations, arrays, and OOP structure.</p>
                 </div>
-                <div class="p-6 pt-0">
-                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">C++</span>
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">OOP</span>
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">Arrays</span>
-                    </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                    <span class="text-xs font-mono text-theme-orchid">#C++</span>
+                    <span class="text-xs font-mono text-theme-orchid">#OOP</span>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-xs font-mono text-brand-accent">Jul 2026</span>
-                        <a href="https://github.com/surajbindra" target="_blank" class="text-slate-400 hover:text-white text-lg"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Desktop Voice Assistance</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-6 list-disc list-inside">
-                        <li>Python-based voice assistant capable of recognizing voice commands.</li>
-                        <li>Automated web opening, web searches, telling time, and system tasks.</li>
-                        <li>Integrated speech-to-text and text-to-speech for hands-free interactions.</li>
-                    </ul>
+            <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <span class="text-xs font-mono text-theme-coral font-semibold">Jul 2026</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-3">Desktop Voice Assistance</h3>
+                    <p class="text-sm text-slate-300 mb-6">Python assistant supporting hands-free system commands, web searches, and speech recognition tasks.</p>
                 </div>
-                <div class="p-6 pt-0">
-                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">Python</span>
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">SpeechRecognition</span>
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">pyttsx3</span>
-                    </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                    <span class="text-xs font-mono text-theme-orchid">#Python</span>
+                    <span class="text-xs font-mono text-theme-orchid">#SpeechRec</span>
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-xs font-mono text-brand-accent">Oct 2025</span>
-                        <a href="https://github.com/surajbindra" target="_blank" class="text-slate-400 hover:text-white text-lg"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">LPG Leakage Detection</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-6 list-disc list-inside">
-                        <li>Embedded safety system using gas sensors to detect harmful gas.</li>
-                        <li>Automatic alert mechanism using a buzzer and GSM phone notifications.</li>
-                        <li>Low-cost indoor safety solution designed for homes and small spaces.</li>
-                    </ul>
+            <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <span class="text-xs font-mono text-theme-coral font-semibold">Oct 2025</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-3">LPG Leakage Detection</h3>
+                    <p class="text-sm text-slate-300 mb-6">Safety hardware solution using gas sensors, buzzer alerts, and GSM automated phone notifications.</p>
                 </div>
-                <div class="p-6 pt-0">
-                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">Arduino</span>
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">MQ2 Sensor</span>
-                        <span class="text-xs font-mono text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded">GSM Module</span>
-                    </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                    <span class="text-xs font-mono text-theme-orchid">#Arduino</span>
+                    <span class="text-xs font-mono text-theme-orchid">#GSM</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="py-20 px-6 max-w-6xl mx-auto" id="education">
-        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-white mb-4">Education Journey</h2>
-            <div class="h-1 w-12 bg-brand-accent mx-auto rounded-full"></div>
-        </div>
-
-        <div class="relative border-l-2 border-slate-800 ml-4 md:ml-32 space-y-12">
-            <!-- Item 1 -->
-            <div class="relative pl-8" data-aos="fade-up">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-accent border-4 border-brand-bg"></div>
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
-                        <h3 class="text-xl font-bold text-white">Lovely Professional University</h3>
-                        <span class="text-xs font-mono text-brand-accent bg-blue-500/10 px-2.5 py-1 rounded-full">Aug 2025 - Present</span>
-                    </div>
-                    <p class="text-slate-300 font-medium">B.Tech - Computer Science & Engineering</p>
-                    <p class="text-sm text-slate-400 mt-1">Phagwara, Punjab • <span class="text-brand-accent font-semibold">CGPA: 8.76</span></p>
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="relative pl-8" data-aos="fade-up">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-brand-bg"></div>
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
-                        <h3 class="text-xl font-bold text-white">Kendriya Vidyalaya O.F Bhusawal</h3>
-                        <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-full">Apr 2022 - Mar 2024</span>
-                    </div>
-                    <p class="text-slate-300 font-medium">Intermediate</p>
-                    <p class="text-sm text-slate-400 mt-1">Bhusawal, Maharashtra • <span class="text-brand-accent font-semibold">Percentage: 78%</span></p>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="relative pl-8" data-aos="fade-up">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-brand-bg"></div>
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
-                        <h3 class="text-xl font-bold text-white">Central Railway Senior Secondary High School</h3>
-                        <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-full">Apr 2021 - Mar 2022</span>
-                    </div>
-                    <p class="text-slate-300 font-medium">Matriculation</p>
-                    <p class="text-sm text-slate-400 mt-1">Bhusawal, Maharashtra • <span class="text-brand-accent font-semibold">Percentage: 83%</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates Section -->
-    <section class="py-20 px-6 max-w-6xl mx-auto" id="certificates">
-        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-white mb-4">Certifications</h2>
-            <div class="h-1 w-12 bg-brand-accent mx-auto rounded-full"></div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 rounded-2xl border-l-4 border-l-blue-500" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex justify-between items-start mb-2">
-                    <span class="text-xs font-mono text-slate-400">Mar 2026</span>
-                    <span class="text-xs font-mono bg-blue-500/10 text-brand-accent px-2 py-0.5 rounded">Infosys</span>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-1">Introduction to Cyber Security</h3>
-                <p class="text-xs text-slate-400">Springboard Platform</p>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl border-l-4 border-l-indigo-500" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex justify-between items-start mb-2">
-                    <span class="text-xs font-mono text-slate-400">Feb 2026</span>
-                    <span class="text-xs font-mono bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded">IBM / Coursera</span>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-1">Supervised Machine Learning: Regression</h3>
-                <p class="text-xs text-slate-400">Coursera Platform</p>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-500" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex justify-between items-start mb-2">
-                    <span class="text-xs font-mono text-slate-400">Feb 2026</span>
-                    <span class="text-xs font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded">IBM / Coursera</span>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-1">Exploratory Data Analysis for ML</h3>
-                <p class="text-xs text-slate-400">Coursera Platform</p>
-            </div>
+    <!-- Navigation Banner to Page 2 -->
+    <section class="py-12 px-6 max-w-6xl mx-auto">
+        <div class="glass-card rounded-3xl p-10 text-center relative overflow-hidden" data-aos="zoom-in">
+            <h3 class="text-2xl font-display font-bold text-white mb-2">Looking for Certificates & Achievements?</h3>
+            <p class="text-slate-300 max-w-xl mx-auto text-sm mb-6">View my complete verified certificates with original link references and detailed achievement records.</p>
+            <a href="credentials.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-theme-coral to-theme-orchid text-white font-bold hover:shadow-lg hover:shadow-theme-coral/30 transition-all">
+                Explore Credentials Page <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800 py-12 text-center text-sm text-slate-500">
-        <div class="max-w-6xl mx-auto px-6 space-y-4">
-            <div class="flex justify-center gap-6 text-lg text-slate-400">
-                <a href="https://github.com/surajbindra" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/suraj-bindra" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:surajbindra73@gmail.com" class="hover:text-white transition-colors"><i class="fa-regular fa-envelope"></i></a>
-            </div>
-            <p>© 2026 Suraj Kumar Bindra. Built with HTML, Tailwind CSS & AOS.</p>
-        </div>
+    <footer class="border-t border-white/10 py-10 text-center text-xs text-slate-400">
+        <p>© 2026 Suraj Kumar Bindra • Built with HTML & Tailwind CSS</p>
     </footer>
 
-    <!-- AOS JS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-    </script>
+    <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
