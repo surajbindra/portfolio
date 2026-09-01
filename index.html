@@ -115,27 +115,35 @@
             </div>
 
             <!-- Quick Showcase Card -->
+            <!-- Hero Profile Picture & Overview Card -->
             <div class="md:col-span-4" data-aos="fade-left">
-                <div class="glass-card rounded-3xl p-6 space-y-6 relative overflow-hidden">
-                    <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-theme-coral/20 rounded-full blur-2xl"></div>
-                    <h3 class="text-white font-display font-bold text-xl border-b border-white/10 pb-4 flex items-center justify-between">
-                        Overview
-                        <a href="credentials.html" class="text-xs text-theme-orchid font-normal hover:underline">View All &rarr;</a>
-                    </h3>
-                    
-                    <div class="space-y-4">
-                        <div class="p-4 rounded-xl bg-white/5 border border-white/5">
-                            <p class="text-xs text-theme-orchid font-semibold">PROBLEMS SOLVED</p>
-                            <p class="text-2xl font-extrabold text-white">100+</p>
-                            <p class="text-xs text-slate-400">On LPU's Neo Colab coding platform</p>
+                <div class="glass-card rounded-3xl p-6 space-y-6 relative overflow-hidden border border-theme-orchid/30 text-center">
+                    <!-- Glow Effect -->
+                    <div class="absolute -top-10 -right-10 w-36 h-36 bg-theme-orchid/30 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <!-- Profile Image Container -->
+                    <div class="relative w-44 h-44 mx-auto rounded-full p-1 bg-gradient-to-tr from-theme-coral via-theme-orchid to-white shadow-xl shadow-theme-coral/20">
+                        <!-- Ensure your image on GitHub is named profile.jpg or update the filename below -->
+                        <img src="profile.png" alt="Suraj Kumar Bindra" class="w-full h-full object-cover rounded-full border-2 border-theme-bg">
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-display font-bold text-white">Suraj Kumar Bindra</h3>
+                        <p class="text-xs text-theme-orchid font-semibold tracking-wide uppercase mt-1">B.Tech CSE Student</p>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/10 grid grid-cols-2 gap-4 text-center">
+                        <div class="p-3 rounded-2xl bg-white/5 border border-white/5">
+                            <p class="text-xl font-extrabold text-white">100+</p>
+                            <p class="text-[10px] text-slate-400">Problems Solved</p>
                         </div>
-                        <div class="p-4 rounded-xl bg-white/5 border border-white/5">
-                            <p class="text-xs text-theme-coral font-semibold">HACKATHONS</p>
-                            <p class="text-2xl font-extrabold text-white">4 Participations</p>
-                            <p class="text-xs text-slate-400">University-level competition projects</p>
+                        <div class="p-3 rounded-2xl bg-white/5 border border-white/5">
+                            <p class="text-xl font-extrabold text-white">8.76</p>
+                            <p class="text-[10px] text-slate-400">Current CGPA</p>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </section>
